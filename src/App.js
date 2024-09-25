@@ -1,23 +1,17 @@
-import logo from './logo.svg';
+import Navbar from './navbar';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      
+      <Navbar />
+      {/* Rest of your content */}
+      <section id="home" style={{ height: '100vh', backgroundColor: '#f4f4f4' }}>Home Section</section>
+      <section id="about" style={{ height: '100vh', backgroundColor: '#eaeaea' }}>About Section</section>
+      <section id="services" style={{ height: '100vh', backgroundColor: '#f4f4f4' }}>Services Section</section>
+      <section id="carrier" style={{ height: '100vh', backgroundColor: '#eaeaea' }}>Carrier Section</section>
+      <section id="contact" style={{ height: '100vh', backgroundColor: '#f4f4f4' }}>Contact Section</section>
     </div>
   );
 }
