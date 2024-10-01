@@ -1,110 +1,123 @@
- /* Base Styles */
- * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-  }
-  
-  header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 999;
-  }
-  
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: #333;
-    transition: padding 0.3s ease;
-  }
-  
-  .logo {
-    color: white;
-    font-size: 1.5rem;
-  }
-  
+  /* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 1rem 3rem;
+  background-color: rgba(3, 0, 41, 0.8); /* Semi-transparent background */
+  border-radius: 10px; /* Rounded corners */
+  backdrop-filter: blur(10px); /* Blur effect */
+  transition: padding 0.3s ease;
+}
+
+.logo img {
+  height: 40px; /* Adjust the height as needed */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 4rem;
+}
+
+.nav-links li {
+  position: relative; 
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.5rem 1rem; 
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effect for nav links */
+.nav-links li a:hover {
+  background-color: blueviolet; 
+  color: red; 
+  border-radius: 5px; 
+}
+
+/* Hide nav links when scrolling */
+.nav-links.hide {
+  display: none;
+}
+
+/* Show nav links when hamburger is clicked */
+.nav-links.show {
+  display: flex;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+/* Show hamburger when scrolled */
+.navbar.collapsed .hamburger {
+  display: flex;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-  }
-  
-  .nav-links li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-  }
-  
-  /* Hide nav links when scrolling */
-  .nav-links.hide {
     display: none;
+    flex-direction: column;
+    background-color: rgba(22, 131, 160, 0.9); /* Semi-transparent */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
   }
-  
-  /* Show nav links when hamburger is clicked */
+
   .nav-links.show {
     display: flex;
   }
-  
-  /* Hamburger Menu */
+
   .hamburger {
-    display: none;
-    cursor: pointer;
-    flex-direction: column;
-    gap: 5px;
-  }
-  
-  .hamburger .bar {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    transition: all 0.3s ease;
-  }
-  
-  /* Show hamburger when scrolled */
-  .navbar.collapsed .hamburger {
     display: flex;
   }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .nav-links {
-      display: none;
-      flex-direction: column;
-      background-color: #333;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      text-align: center;
-      padding: 1rem 0;
-    }
-  
-    .nav-links.show {
-      display: flex;
-    }
-  
-    .hamburger {
-      display: flex;
-    }
-  }
-  
-  /* Toggle hamburger into "X" */
-  .hamburger.open .bar:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-  
-  .hamburger.open .bar:nth-child(2) {
-    opacity: 0;
-  }
-  
-  .hamburger.open .bar:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-  }
-  
+}
+
+/* Toggle hamburger into "X" */
+.hamburger.open .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
