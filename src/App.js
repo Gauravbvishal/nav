@@ -1,17 +1,16 @@
-import Navbar from './navbar';
+import React from 'react';
+import Navbar from './navbar'; // Ensure the file name matches the case
 import './App.css';
 
 function App() {
   return (
     <div>
-      
       <Navbar />
-      {/* Rest of your content */}
-      <section id="home" style={{ height: '100vh', backgroundColor: '#f4f4f4' }}>Home Section</section>
-      <section id="about" style={{ height: '100vh', backgroundColor: '#eaeaea' }}>About Section</section>
-      <section id="services" style={{ height: '100vh', backgroundColor: '#f4f4f4' }}>Services Section</section>
-      <section id="carrier" style={{ height: '100vh', backgroundColor: '#eaeaea' }}>Carrier Section</section>
-      <section id="contact" style={{ height: '100vh', backgroundColor: '#f4f4f4' }}>Contact Section</section>
+      <section id="home" style={{ height: '100vh', backgroundColor: '#f4f4f4', marginTop: '70px' }}>Home Section</section>
+      <section id="about" style={{ height: '100vh', backgroundColor: '#eaeaea', marginTop: '70px' }}>About Section</section>
+      <section id="services" style={{ height: '100vh', backgroundColor: '#f4f4f4', marginTop: '70px' }}>Services Section</section>
+      <section id="carrier" style={{ height: '100vh', backgroundColor: '#eaeaea', marginTop: '70px' }}>Carrier Section</section>
+      <section id="contact" style={{ height: '100vh', backgroundColor: '#f4f4f4', marginTop: '70px' }}>Contact Section</section>
     </div>
   );
 }
